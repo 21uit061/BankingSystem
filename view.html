@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <link rel="stylesheet" href="front.css">
+    <style>
+        
+          body {
+      margin: 0;
+      padding: 0;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Background color with opacity */
+      z-index: -1;
+    }   
+ul.navbar {
+            background-color: #333;
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display:flex;
+           flex-direction:right;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            float:right;
+          font-size:20px;
+        }
+
+        ul.navbar li:hover {
+            background-color: #ddd;
+            color: black;
+        }
+.right-section{
+          margin-left:900px;
+          margin-top:200px;
+        }    
+.right-section button{
+          font-size:20px;
+      background-color:#4caf50;
+  color:black;
+   width:400px;
+        }    
+.right-section button:hover
+{
+background-color:#333;
+color:white;
+}
+#backbutt
+{
+font-size:20px;
+ background-color:#4caf50;
+color:black;
+width:200px;
+margin-left:1000px;
+margin-top:200px;
+}
+#backbutt:hover{
+background-color:#333;
+color:white;
+}
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+	$("#About").click(function (e) {
+	 window.open("About.html", "_self");
+					});
+
+	$("#Contact").click(function (e) {
+	  window.open("Contact.html", "_self");
+					});
+
+	$("#Login").click(function (e) {
+	  window.open("Login.html", "_self");
+					});
+
+	$("#back").click(function (e) {
+	  window.open("Navigate.html");
+					});
+	$("#backbutt").click(function (e) {
+	  window.open("Account.html");
+					});
+	$(".trans-button").click(function (e) {
+	  window.open("http://localhost:3001/trans.html");
+					});
+               $(".account-button").click(function (e) {
+	  window.open("http://localhost:3002");
+					});
+
+});
+</script>
+</head>
+<body>
+    <ul class="navbar">
+        <li id="About">About</li>
+        <li id="Contact">Contact</li>
+        <li id="Login">Login</li>
+        <li id="back">Home</li>
+    </ul>
+<form> 
+    <div class="right-section"></div>
+    <div class="right-section">
+        <button class="account-button">View Balance</button><br><br>
+        <button class="trans-button"> Transfer Money</button>
+    </div>
+  <div> <button id="backbutt">Go Back</button> </div>
+</form>
+</body>
+</html>
+       
+
+    
+   

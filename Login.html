@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+#backbutt
+{
+font-size:20px;
+background-color:#4caf50;
+color:black;
+margin-left:1100px;
+margin-top:0px;
+width:200px;
+}
+#backbutt:hover{
+background-color:#333;
+color:white;
+}
+.log-img
+{
+background-color:#add8e6;
+background-image:url("user.png");
+background-repeat:no-repeat;
+background-position:center;
+background-size:cover;
+width:280px;
+height:300px;
+margin-right:5%;
+margin-top:0;
+padding-top:12%;
+}
+ .log-img:hover
+{
+border:2px solid #90EE90;
+}
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  }
+.login-form{
+  background-color:#3333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+}
+.login-form:hover
+{
+background-color:0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.login-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+   background-color:#eedd82;
+  
+}
+
+.login-form input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+.login-form:hover
+{
+border:2px solid black;
+}
+.login-form input:hover
+{
+background-color:#90EE90;
+}
+.login-form button {
+  width: 65%;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.4);;
+  color:white;
+   border-radius: 2px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-form button:hover,:focus {
+  background: #00eeff;
+  border:1px solid #00e1ff;
+text-shadow: 0 0 5px #ffffff,0 0 10px #ffffff,0 20 10px #ffffff;
+color:black;
+
+}
+  body {
+      margin: 0;
+      padding: 0;
+      background-image: url('f.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+     background-attachment:fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* Background color with opacity */
+      z-index: -1;
+    }   
+     </style>
+<script src="jquery.js"></script>
+<script>
+ $(document).ready(function () {
+     $("#check").click(function(e){
+		 window.open("Account.html", "_self");
+		
+ });
+$("#backbutt").click(function (e) {
+	  window.open("navigate.html", "_self");
+	});
+
+});
+</script>
+</head>
+<body >
+<span id="img"></span>
+  <div class="login-page"> 
+      <div class="login-form"> 
+     <div class="log-img"></div>
+        <h1>Login</h1>
+<form action="/add" method="post">
+                    <input
+          type="text"
+          placeholder="Enter the name"
+    id="username" name="username" required/>
+      	
+          <input
+          type="password"
+          placeholder="password"
+    id="password" name="password" required/>
+        <input
+          type="password"
+          placeholder="confirmPassword"
+          name="confirmpassword"
+         
+           id="cpassword" required/>
+        <button id="check">Login</button>
+        
+      </div>
+<div><button id="backbutt">Go Back</button></div>
+</form>
+ </body>
+   
+  
+</html>
